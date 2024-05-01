@@ -33,7 +33,7 @@ def register():
         db.session.add(new_user)
         db.session.commit()
         flash('Регистрация успешна. Теперь вы можете войти!', 'success')
-        return redirect(url_for('login'))
+        return redirect(url_for('regpage.html'))
     return render_template('regpage.html')
 
 if __name__ == '__main__':
